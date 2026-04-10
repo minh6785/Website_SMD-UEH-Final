@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMD - Specialists</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+</head>
+<body>
+    <div class="gradient-bg">
+        <header>
+    <div class="logo">
+        <img src="../pic/SMD Logo (1).png" alt="SMD - School of Media Design" class="logo-img">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="truyen_thong.html">Trang Chủ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li><a href="daotao.html">Đào Tạo</a></li>
+            <li><a href="#">Nghiên Cứu</a></li>
+            <li><a href="trangchu.html">Truyền Thông</a></li>
+            <li class="active"><a href="index.html">Góc Sinh Viên</a></li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="lang-btn" id="langToggle">VIE <span class="dot"></span></button>
+        <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+</header>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>CHÚNG TÔI LÀ SMDer</h1>
+                <h2 class="title-gradient">SPECIALISTS</h2>
+            </div>
+        </section>
+
+        <!-- Ảnh thành viên nằm trong gradient-bg để nổi lên trên nền gradient -->
+        <div class="members-photos">
+            <div class="photo-slot">
+                <img src="../pic/Minh Huy.png" alt="Minh Huy">
+            </div>
+            <div class="photo-slot">
+                <img src="../pic/Phuong Nghi.png" alt="Phương Nghi">
+            </div>
+            <div class="photo-slot">
+                <img src="../pic/Thai Anh.png" alt="Thai Anh">
+            </div>
+            <div class="photo-slot">
+                <img src="../pic/Thao Nguyen.png" alt="Thảo Nguyên">
+            </div>
+            <div class="photo-slot">
+                <img src="../pic/Hoang Minh.png" alt="Hoàng Minh">
+            </div>
+        </div>
+    </div>
+
+    <!-- Phần trắng phía dưới chứa thông tin thành viên -->
+    <section class="team-info">
+        <div class="member">
+            <h3>Minh Huy</h3>
+            <p class="student-id">31231020789</p>
+            <p class="percent">xx%</p>
+            <ul>
+                <li>-hbchjxbch</li>
+                <li>-jhcsdbchjb</li>
+                <li>-hxcbhjsbchdn</li>
+            </ul>
+        </div>
+        <div class="member">
+            <h3>Phương Nghi</h3>
+            <p class="student-id">31231023593</p>
+            <p class="percent">xx%</p>
+            <ul>
+                <li>-hbchjxbch</li>
+                <li>-jhcsdbchjb</li>
+                <li>-hxcbhjsbchdn</li>
+            </ul>
+        </div>
+        <div class="member">
+            <h3>Thái Anh</h3>
+            <p class="student-id">31231023593</p>
+            <p class="percent">xx%</p>
+            <ul>
+                <li>-hbchjxbch</li>
+                <li>-jhcsdbchjb</li>
+                <li>-hxcbhjsbchdn</li>
+            </ul>
+        </div>
+        <div class="member">
+            <h3>Thảo Nguyên</h3>
+            <p class="student-id">31231023593</p>
+            <p class="percent">xx%</p>
+            <ul>
+                <li>-hbchjxbch</li>
+                <li>-jhcsdbchjb</li>
+                <li>-hxcbhjsbchdn</li>
+            </ul>
+        </div>
+        <div class="member">
+            <h3>Hoàng Minh</h3>
+            <p class="student-id">31231023593</p>
+            <p class="percent">xx%</p>
+            <ul>
+                <li>-hbchjxbch</li>
+                <li>-jhcsdbchjb</li>
+                <li>-hxcbhjsbchdn</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+<script>
+const langBtn = document.getElementById('langToggle');
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        const t = langBtn.childNodes[0];
+        t.nodeValue = t.nodeValue.trim() === 'VIE' ? 'ENG ' : 'VIE ';
+    });
+}
+</script>
+</html>
