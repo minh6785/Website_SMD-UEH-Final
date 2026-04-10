@@ -1,0 +1,263 @@
+/* Reset & Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+}
+
+:root {
+    --bg-pink: #F7DAFC; 
+    --text-purple: #6a2b86;
+    --accent-purple: #7c1faa;
+    --glass-inner: rgba(255, 255, 255, 0.25);
+    --btn-gradient: linear-gradient(90deg, #9b30ee, #cc55ff);
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* ===== GRADIENT BACKGROUND AREA ===== */
+.gradient-bg {
+    background: radial-gradient(ellipse at 50% 40%, #fbedfe 0%, #e8d5fc 40%, #d8e5ff 70%, #dce8ff 100%);
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: #6a2b86;
+}
+
+.logo-img {
+    width: 120px;       /* Đặt chiều rộng cố định 120px */
+    height: 86px;       /* Đặt chiều cao cố định 86px */
+    object-fit: contain; /* Giúp logo không bị méo nếu tỷ lệ ảnh gốc khác 120x86 */
+    display: block;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+
+.logo-icon-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.logo-main {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: #7c1faa;
+}
+
+.logo-leaf {
+    font-size: 22px;
+    margin-top: -4px;
+}
+
+.logo-sub {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #6a2b86;
+    margin-top: 1px;
+}
+
+nav{
+    color:#6a2b86;
+    background-color: var(--bg-pink);
+    padding: 10px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+     text-decoration: none;
+    color: var(--text-purple);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    display: block;
+}
+
+nav li.active a, nav a:hover {
+    background: var(--glass-inner);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: var(--text-purple);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 
+        inset 0 4px 6px rgba(255, 255, 255, 0.2), 
+        0 8px 20px rgba(90, 26, 97, 0.1),
+        inset 0 -1px 1px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1.5px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: #fae8ff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #6a2b86;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lang-btn .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d156eb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.search-btn {
+    background-color: #fae8ff;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #6a2b86;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    padding: 30px 5% 0px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: -8px;
+}
+
+.title-gradient {
+    font-size: 108px;
+    font-weight: 800;
+    color: transparent;
+    background: linear-gradient(90deg, #dd59f1, #f07aff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    filter: drop-shadow(0 4px 15px rgba(210, 50, 240, 0.25));
+}
+
+/* ===== MEMBER PHOTOS ROW ===== */
+.members-photos {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    align-items: flex-end;
+    padding: 0 5%;
+    position: relative;
+    z-index: 1;
+}
+
+.photo-slot {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.photo-slot img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    object-position: bottom;
+    display: block;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.12));
+    transform: scale(1.20);
+    transform-origin: bottom center;
+}
+
+/* ===== TEAM INFO ===== */
+.team-info {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+    z-index: 2;
+    margin-top: -127px;
+    padding: 25px 5% 50px;
+}
+
+.member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.member h3 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.member .student-id {
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.member .percent {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.member ul {
+    list-style: none;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.7;
+    padding: 0;
+}
