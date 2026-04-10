@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap');
+
+/* ===== RESET & CƠ BẢN ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Inter', 'Segoe UI', sans-serif;
+}
+
+:root {
+    --bg-pink: #F7DAFC; 
+    --text-purple: #6a2b86;
+    --accent-purple: #f5f1f7; /* #c462f5 */
+    --glass-inner: rgba(255, 255, 255, 0.25);
+    --btn-gradient: linear-gradient(90deg, #9b30ee, #cc55ff);
+}
+
+body {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.gradient-bg {
+    background: radial-gradient(ellipse at 50% 40%, #fbedfe 0%, #e8d5fc 40%, #d8e5ff 70%, #dce8ff 100%);
+    position: relative;
+    padding-bottom: 0;
+}
+
+/* ===== TOP NAVIGATION ===== */
+.tt-top-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 22px 5%;
+}
+
+.tt-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.tt-logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-purple);
+}
+
+.logo-img {
+    width: 120px;       /* Đặt chiều rộng cố định 120px */
+    height: 86px;       /* Đặt chiều cao cố định 86px */
+    object-fit: contain; /* Giúp logo không bị méo nếu tỷ lệ ảnh gốc khác 120x86 */
+    display: block;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+}
+
+.logo-icon-wrap { display: flex; align-items: center; gap: 4px; }
+
+.tt-logo .logo-main {
+    font-size: 38px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: var(--text-purple);
+}
+.tt-logo .logo-leaf { font-size: 22px; margin-top: -4px; }
+.tt-logo .logo-sub {
+    font-size: 7.5px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-purple);
+    margin-top: 1px;
+}
+
+.tt-nav-bar {
+    background-color: #F7DAFC !important;
+    padding: 8px 15px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tt-nav-bar ul {
+    display: flex;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.tt-nav-bar a {
+    text-decoration: none;
+    color: var(--text-purple);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border-radius: 50px;
+    display: block;
+    white-space: nowrap;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tt-nav-bar li.active a, .tt-nav-bar a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.tt-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    background-color: #F7DAFC;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-purple);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+.lang-btn .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d156eb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.search-btn {
+    background-color: #F7DAFC !important;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--text-purple);
+    flex-shrink: 0;
+}
+
+/* ===== HERO SECTION ===== */
+.tt-hero {
+    background: url('../pic/bg_tt.png') center/cover no-repeat;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    padding: 100px 225px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tt-hero-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.tt-hero-title {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 200px;
+}
+
+.tt-hero-subtitle {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: right;
+}
+
+.text-white { color: #ffffff; }
+.text-pink { color: var(--accent-purple); }
+
+/* ===== STATS SECTION ===== */
+.tt-stats-section {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding: 80px 40px;
+    background: #fff;
+    text-align: center;
+}
+
+.tt-stat-number {
+    font-size: 100px;
+    font-weight: 900;
+    color: #e47ef4;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.tt-stat-label {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-purple);
+    line-height: 1.3;
+}
+
+/* ===== CHƯƠNG TRÌNH HỌC ===== */
+.tt-programs-section {
+    padding: 60px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tt-section-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 40px;
+}
+
+.tt-programs-carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.tt-program-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: #000;
+transition: transform 0.3s ease;
+
+}
+.tt-program-card:hover {
+  transform: translateY(-10px);
+}
+.tt-program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,0.85) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+.card-1 {
+  background: url("../pic/55.png") no-repeat center/cover;
+}
+
+/* CARD 2 */
+.card-2 {
+  background: url("../pic/555.png") no-repeat center/cover;
+}
+
+/* CARD 3 */
+.card-3 {
+  background: url("../pic/5555.png") no-repeat center/cover;
+}
+
+.tt-program-content {
+  position: relative;
+  z-index: 2;
+  width: 100%; /* QUAN TRỌNG */
+}
+.tt-program-content h3 { font-size: 20px; margin-bottom: 20px; color: #000; }
+
+.tt-program-meta {
+    display: flex;
+    gap: 20px;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.btn-register {
+    /* Auto layout & Kích thước */
+    display: inline-flex;  /* Dùng inline-flex để nút căn giữa theo banner-container */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 10px;
+    width: 208px;
+    height: 56px;
+    box-sizing: border-box; /* Đảm bảo padding không làm nút phình to hơn 56px */
+    
+    /* Màu sắc & Viền */
+    background: #9831A7;
+    border-radius: 50px;
+    
+    /* Font chữ */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    
+    /* Các tùy chỉnh thêm cho web */
+    text-decoration: none; /* Xóa gạch chân mặc định của thẻ <a> */
+    margin-top: 24px;      /* Tạo khoảng cách với dòng chữ h2 ở trên */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động mượt mà khi hover */
+}
+
+/* Hiệu ứng khi rê chuột vào nút */
+.btn-register:hover {
+    background: #7a2786; /* Đổi màu nền tối đi một chút */
+    transform: translateY(-2px); /* Nút hơi nảy lên */
+    box-shadow: 0 4px 12px rgba(152, 49, 167, 0.4); /* Thêm bóng đổ màu tím */
+}
+
+.tt-btn-explore {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: #e47ef4;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===== SMD MOMENTS ===== */
+.tt-moments-section {
+    background: #F7DAFC;
+    padding: 80px 40px;
+}
+
+.tt-moments-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.tt-story-name { font-size: 28px; font-weight: 700; margin-bottom: 5px; }
+.tt-story-class { font-size: 16px; color: #111; font-weight: 600; margin-bottom: 20px; }
+.tt-story-text p { font-size: 15px; color: #444; line-height: 1.8; text-align: justify; }
+
+.tt-moments-image-wrapper {
+    position: relative;
+    border-radius: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #d368b6, #f39c12);
+}
+
+.tt-moments-image-wrapper img { width: 100%; border-radius: 10px; display: block; }
+
+/* ===== TIN TỨC ===== */
+.tt-news-section {
+    padding: 80px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.tt-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 120px;
+}
+
+.tt-news-image { height: 200px; border-radius: 10px; margin-bottom: 20px; overflow: hidden; }
+.tt-news-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.tt-news-content h3 { font-size: 16px; line-height: 1.5; margin-bottom: 10px; font-weight: 700;text-align: justify;hyphens: auto; }
+.tt-news-date { font-size: 12px; color: #999; margin-bottom: 15px; }
+
+.tt-featured-news {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.tt-featured-left h3 { font-size: 22px; font-weight: 700; margin-bottom: 15px; }
+.tt-featured-date { font-size: 14px; color: #999; margin-bottom: 20px; }
+.tt-featured-description { font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 30px; }
+.tt-featured-image { height: 350px; border-radius: 10px; overflow: hidden; }
+.tt-featured-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* =========================================
+   PRE-FOOTER BANNER
+   ========================================= */
+.pre-footer-banner {
+    width: 100%;
+    /* Bạn có thể tăng giảm min-height tùy theo tỷ lệ bức ảnh của bạn */
+    min-height: 400px; 
+    
+    /* Thay đổi tên 'bg_pre_footer.jpg' thành tên file ảnh thật của bạn */
+    background-image: url('../pic/bg_pre_footer.png'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px; /* Tạo khoảng cách với phần nội dung phía trên */
+}
+
+.banner-container {
+    text-align: center;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* --- Các class dưới đây dùng trong trường hợp bạn muốn chèn thêm chữ/nút đè lên ảnh --- */
+.banner-container h2 {
+    color: #ffffff;             /* Màu chữ trắng */
+    font-size: 36px;            /* Kích thước chữ to rõ */
+    font-weight: bold;          /* In đậm */
+    text-transform: uppercase;  /* Viết hoa toàn bộ chữ */
+    margin: 0;
+    line-height: 1.5;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Đổ bóng đen phía sau giúp chữ nổi bần bật trên nền xanh */
+}
+
+.banner-btn {
+    display: inline-block;
+    padding: 12px 36px;
+    background-color: #0056b3; /* Chỉnh màu nền nút theo tông màu web của bạn */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #003d82;
+}
+
+
+/* ===== FOOTER ===== */
+.site-footer {
+  /* background-color: var(--text-purple); <-- Xóa hoặc comment dòng này */
+  /* Thay thế bằng gradient dựa trên hình ảnh */
+  background: linear-gradient(
+    to bottom,
+    #6e35dd 26%, /* Màu tím xanh ở vị trí 26% */
+    #9831a7 62% /* Màu tím đỏ ở vị trí 62% */
+  );
+  padding: 60px 5% 120px;
+}footer-section { /* Thay class này bằng class footer thực tế của bạn */
+    margin-top: 120px; /* Khoảng cách trắng được tạo ra phía trên footer */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1.2fr;
+    gap: 120px; /* Đây là khoảng cách giữa các cụm nội dung lớn */
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.footer-logos { display: flex; gap: 30px; margin-bottom: 25px; }
+.footer-logo { height: 50px; object-fit: contain; }
+.footer-institute { font-size: 22px; font-weight: 600; color: #FFF2F6; line-height: 1.3; margin-bottom: 20px; }
+.footer-contact { font-size: 15px; color: #FFFFFF; line-height: 1.6; }
+.links-col h3 { font-size: 22px; font-weight: 600; color: #FFFFFF; margin-bottom: 25px; }
+.links-col ul { list-style: none; }
+.links-col ul li { margin-bottom: 12px; }
+.links-col ul li a { color: #CACACA; text-decoration: none; font-size: 14px; transition: color 0.3s; }
+.links-col ul li a:hover { color: #FFFFFF; }
+.social-links { display: flex; gap: 15px; margin-top: 30px; }
+.social-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #FFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+footer, .footer-section { /* Thay class này bằng class footer thực tế của bạn */
+    margin-top: 120px; /* Khoảng cách trắng được tạo ra phía trên footer */
+}
+@media (max-width: 1024px) {
+    .footer-container { grid-template-columns: 1fr 1fr; gap: 60px; }
+    .tt-programs-carousel { grid-template-columns: 1fr; }
+    .tt-news-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .footer-container { grid-template-columns: 1fr; gap: 40px; }
+    .tt-hero-title { font-size: 48px; }
+    .tt-hero-subtitle { font-size: 22px; }
+    .tt-stats-section { flex-direction: column; gap: 40px; }
+    .tt-moments-container { grid-template-columns: 1fr; }
+    .tt-news-grid { grid-template-columns: 1fr; }
+    .tt-featured-news { grid-template-columns: 1fr; }
+}
