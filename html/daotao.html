@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMD - Đào Tạo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/daotao.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== FULLSCREEN HERO ===== -->
+<section class="hero-fullscreen" id="hero-top">
+    <!-- Fixed header bên trong hero -->
+    <header>
+    <div class="logo">
+        <img src="../pic/SMD Logo (1).png" alt="SMD - School of Media Design">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="truyen_thong.html">Trang Chủ</a></li>
+            <li><a href="#">Giới Thiệu</a></li>
+            <li class="active"><a href="daotao.html">Đào Tạo</a></li>
+            <li><a href="#">Nghiên Cứu</a></li>
+            <li><a href="trangchu.html">Truyền Thông</a></li>
+            <li><a href="index.html">Góc Sinh Viên</a></li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="lang-btn" id="langToggle">VIE <span class="dot"></span></button>
+        <button class="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+    </div>
+</header>
+
+    <!-- Hero content căn giữa màn hình -->
+    <div class="hero-center">
+        <h1 class="hero-big-title">ĐÀO TẠO</h1>
+        <div class="hero-actions">
+            <button class="btn-dangky-hero" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">
+                Đăng Ký Ngay
+            </button>
+        </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+    </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="dt-main" id="chuong-trinh">
+
+    <!-- ĐẠI HỌC -->
+    <section class="degree-group">
+        <h2 class="degree-label">Đại Học</h2>
+        <div class="program-list">
+            <div class="program-item">
+                <div class="program-item-bg">
+                    <img src="../pic/1.png" alt="" class="program-bg-img program-bg-img--top">
+                    <div class="program-overlay"></div>
+                </div>
+                <div class="program-item-content">
+                    <div class="program-item-info">
+                        <h3>Truyền Thông & Thiết Kế</h3>
+                        <div class="program-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 125 tín chỉ</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3,5 năm</span>
+                        </div>
+                        <p>Trang bị kỹ năng thiết kế và sản xuất truyền thông số, giúp sinh viên sẵn sàng làm việc trong môi trường sáng tạo và doanh nghiệp toàn cầu.</p>
+                    </div>
+                    <button class="btn-xem-them" onclick="window.location.href='truyen-thong-thiet-ke.html'">Xem Thêm</button>
+                </div>
+            </div>
+            <div class="program-item">
+                <div class="program-item-bg">
+                    <img src="../pic/2.png" alt="" class="program-bg-img program-bg-img--bottom">
+                    <div class="program-overlay"></div>
+                </div>
+                <div class="program-item-content">
+                    <div class="program-item-info">
+                        <h3>ArtTech</h3>
+                        <div class="program-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 125 tín chỉ</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3,5 năm</span>
+                        </div>
+                        <p>Trang bị tư duy sáng tạo kết hợp nghệ thuật và công nghệ, giúp sinh viên tạo ra các trải nghiệm mới với AI, thực tế ảo và các nền tảng số.</p>
+                    </div>
+                    <button class="btn-xem-them" onclick="window.open('truyen-thong-thiet-ke.html','_blank')">Xem Thêm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THẠC SĨ -->
+    <section class="degree-group">
+        <h2 class="degree-label">Thạc Sĩ</h2>
+        <div class="program-list">
+            <div class="program-item">
+                <div class="program-item-bg">
+                    <img src="../pic/3.png" alt="" class="program-bg-img">
+                    <div class="program-overlay"></div>
+                </div>
+                <div class="program-item-content">
+                    <div class="program-item-info">
+                        <h3>ArtTech & Media</h3>
+                        <div class="program-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 40 tín chỉ</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 năm</span>
+                        </div>
+                        <p>Phát triển tư duy chiến lược, ứng dụng công nghệ mới để dẫn dắt các dự án nghệ thuật và truyền thông trong bối cảnh số.</p>
+                    </div>
+                    <button class="btn-xem-them" onclick="window.open('truyen-thong-thiet-ke.html','_blank')">Xem Thêm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIẾN SĨ -->
+    <section class="degree-group">
+        <h2 class="degree-label">Tiến Sĩ</h2>
+        <div class="program-list">
+            <div class="program-item">
+                <div class="program-item-bg">
+                    <img src="../pic/4.png" alt="" class="program-bg-img">
+                    <div class="program-overlay"></div>
+                </div>
+                <div class="program-item-content">
+                    <div class="program-item-info">
+                        <h3>ArtTech & Media Study</h3>
+                        <div class="program-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 72 tín chỉ</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 5 - 6 năm</span>
+                        </div>
+                        <p>Nghiên cứu về nghệ thuật, công nghệ và truyền thông trong bối cảnh số.</p>
+                    </div>
+                    <button class="btn-xem-them" onclick="window.open('truyen-thong-thiet-ke.html','_blank')">Xem Thêm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIÊN KẾT QUỐC TẾ -->
+    <section class="degree-group">
+        <h2 class="degree-label">Chương Trình Liên Kết Đào Tạo Song Bằng Quốc Tế</h2>
+        <div class="program-list">
+            <div class="program-item">
+                <div class="program-item-bg">
+                    <img src="../pic/1.png
+                    " alt="" class="program-bg-img">
+                    <div class="program-overlay"></div>
+                </div>
+                <div class="program-item-content">
+                    <div class="program-item-info">
+                        <h3>UEH – Macao</h3>
+                        <div class="program-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> 125 tín chỉ</span>
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3,5 năm</span>
+                        </div>
+                        <p>Trải nghiệm học tập quốc tế và nhận song bằng trong lĩnh vực truyền thông – thiết kế đa phương tiện tại UEH và Macao.</p>
+                    </div>
+                    <button class="btn-xem-them" onclick="window.open('truyen-thong-thiet-ke.html','_blank')">Xem Thêm</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NHỮNG ĐIỀU SẼ TRẢI NGHIỆM -->
+   <section class="experience-section">
+    <h2 class="experience-title">Những điều bạn sẽ trải nghiệm tại SMD</h2>
+    <div class="experience-grid">
+        <div class="experience-item">
+            <div class="exp-icon-wrap">
+                <img src="../pic/image 79.png" alt="Hỗ trợ học tập" width="72" height="72">
+            </div>
+            <p>Sinh viên có cơ hội tiếp cận các chương trình hỗ trợ học tập, học bổng và mentoring từ giảng viên & chuyên gia trong ngành để phát triển định hướng cá nhân.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-icon-wrap">
+                <img src="../pic/image 78.png" alt="Chương trình linh hoạt" width="72" height="72">
+            </div>
+            <p>Chương trình học được xây dựng theo hướng linh hoạt, cho phép sinh viên lựa chọn môn học phù hợp với định hướng như thiết kế đồ họa, truyền thông, digital hoặc branding.</p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-icon-wrap">
+                <img src="../pic/image 77.png" alt="Trải nghiệm thực tế" width="72" height="72">
+            </div>
+            <p>Kết hợp giữa lý thuyết, project thực tế, làm việc nhóm và collaboration với doanh nghiệp, giúp sinh viên học thông qua trải nghiệm và sản phẩm thực tế.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- CHƯA BIẾT BẮT ĐẦU TỪ ĐÂU -->
+ <section class="quiz-section">
+    <div class="quiz-container">
+        <div class="quiz-content">
+            <div class="quiz-text">
+                <h2 class="quiz-title">Chưa biết bắt đầu từ đâu? Tìm ngành học phù hợp với bạn</h2>
+                <p class="quiz-desc">Thực hiện bài trắc nghiệm 2 phút để khám phá ngành học phù hợp với sở thích, thế mạnh và định hướng của bạn.</p>
+            </div>
+            <div class="quiz-action">
+                <button class="btn-quiz">Take a quiz</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FORM ĐĂNG KÝ -->
+    <section class="form-section" id="form-section">
+        <div class="form-wrapper">
+            <h2 class="form-title">Đăng Ký Ngay</h2>
+            <div class="form-card">
+                <div class="form-group">
+                    <label>Bạn là<span class="required">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">-- Select --</option>
+                            <option>Học sinh THPT</option>
+                            <option>Sinh viên Đại học</option>
+                            <option>Người đi làm</option>
+                            <option>Khác</option>
+                        </select>
+                        <span class="select-arrow">&#8964;</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Họ và Tên<span class="required">*</span></label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Email<span class="required">*</span></label>
+                    <input type="email">
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại<span class="required">*</span></label>
+                    <input type="tel">
+                </div>
+                <div class="form-group">
+                    <label>Chương trình<span class="required">*</span></label>
+                    <div class="select-wrap">
+                        <select>
+                            <option value="">-- Select --</option>
+                            <option>Truyền Thông & Thiết Kế</option>
+                            <option>ArtTech</option>
+                            <option>ArtTech & Media (Thạc Sĩ)</option>
+                            <option>ArtTech & Media Study (Tiến Sĩ)</option>
+                            <option>UEH – Macao</option>
+                        </select>
+                        <span class="select-arrow">&#8964;</span>
+                    </div>
+                </div>
+                <button class="btn-submit" type="button" id="submitBtn">Đăng Ký Ngay</button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logos">
+                    <img src="../pic/W-CTD-1.png" alt="UEH Logo" class="footer-logo">
+                    <img src="../pic/Butterfly-300x154.png" alt="SMD Logo" class="footer-logo">
+                </div>
+                <h3 class="footer-institute">Khoa Thiết kế Truyền thông<br>Trường Đại học Kinh tế Thành phố Hồ Chí Minh</h3>
+                <p class="footer-contact">
+                    279 Nguyễn Tri Phương, Phường Diên Hồng, Quận 10, TP.HCM<br>
+                    Điện thoại: +84 283 8295 299<br>
+                    Email: smd@ueh.edu.vn<br><br>
+                    Bản quyền © 2022. Đại học Kinh tế Thành phố Hồ Chí Minh.<br>
+                    Đã đăng ký bản quyền. Phát triển bởi SMD.
+                </p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Khám phá SMD</h3>
+                <ul>
+                    <li><a href="truyen_thong.html">Trang chủ</a></li>
+                    <li><a href="#">Meet the team</a></li>
+                    <li><a href="trangchu.html">Tin tức & Sự kiện</a></li>
+                    <li><a href="#">Thông báo sinh viên</a></li>
+                    <li><a href="#">Tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Chương trình Đào tạo</h3>
+                <ul>
+                    <li><a href="daotao.html">Chương trình đào tạo</a></li>
+                    <li><a href="truyen-thong-thiet-ke.html">Truyền thông số và thiết kế đa phương tiện</a></li>
+                    <li><a href="#">Công nghệ nghệ thuật (ArtTech)</a></li>
+                    <li><a href="#">Nghiên cứu & Học thuật</a></li>
+                    <li><a href="#">Tra cứu văn bằng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Sinh viên & Doanh nghiệp</h3>
+                <ul>
+                    <li><a href="#">Hoạt động sinh viên</a></li>
+                    <li><a href="#">Đồ án tiêu biểu</a></li>
+                    <li><a href="#">Hỗ trợ Sinh viên</a></li>
+                    <li><a href="#">Đối tác Doanh nghiệp</a></li>
+                    <li><a href="#">Mạng lưới Cựu sinh viên (Alumni)</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/></svg>
+                    </a>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+/* Accordion toggle */
+function toggleItem(header){
+  const item = header.closest('.roadmap-item');
+  item.classList.toggle('open');
+}
+
+/* Header scroll */
+window.addEventListener('scroll',()=>{
+  document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 80);
+});
+
+/* Form submit */
+document.getElementById('submitBtn').addEventListener('click',function(){
+  const inputs = document.querySelectorAll('#form-section input, #form-section select');
+  let valid = true;
+  inputs.forEach(el=>{ if(!el.value) valid=false; });
+  if(valid){
+    this.textContent='✓ Đăng Ký Thành Công!';
+    this.style.background='linear-gradient(90deg,#22c55e,#16a34a)';
+  } else {
+    this.textContent='Vui lòng điền đầy đủ thông tin';
+    this.style.background='linear-gradient(90deg,#ef4444,#dc2626)';
+    setTimeout(()=>{ this.textContent='Đăng Ký Ngay'; this.style.background=''; },2000);
+  }
+});
+</script>
+<script>
+const langBtn = document.getElementById('langToggle');
+if (langBtn) {
+    langBtn.addEventListener('click', () => {
+        const t = langBtn.childNodes[0];
+        t.nodeValue = t.nodeValue.trim() === 'VIE' ? 'ENG ' : 'VIE ';
+    });
+}
+</script>
+</body>
+</html>
