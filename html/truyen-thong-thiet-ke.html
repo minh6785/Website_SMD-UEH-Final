@@ -210,7 +210,7 @@ nav li.active a, nav a:hover {
   border-radius: 30px;
   padding: 60px 40px 40px;
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0  40px rgba(124, 31, 170, 0.05);
+  box-shadow: 0 20px 40px rgba(124, 31, 170, 0.05);
 }
 /* Thẻ tiêu đề bay lên trên */
 .hero-title-pill {
@@ -241,7 +241,7 @@ nav li.active a, nav a:hover {
   right: 5px; /* Khoảng cách từ lề phải, có thể giữ nguyên hoặc chỉnh nhẹ */
   
   display: flex;
-  gap: ; /* Khoảng cách giữa 2 mục */
+  gap: 20px; /* Khoảng cách giữa 2 mục */
   
   background: rgba(255, 255, 255, 0.7); /* Nền mờ trắng */
   padding: 10px 25px;
@@ -263,7 +263,7 @@ nav li.active a, nav a:hover {
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 30px;
-  margin-top: ;
+  margin-top: 20px;
 }
 .hero-tag{
   display:inline-flex;align-items:center;gap:10px;
@@ -276,12 +276,12 @@ nav li.active a, nav a:hover {
 .hero-left-col {
   display: flex;
   flex-direction: column;
-  gap: ;
+  gap: 20px;
 }
 .hero-desc-box {
   background: rgba(180, 80, 230, 0.15);
   padding: 25px;
-  border-radius: ;
+  border-radius: 20px;
   font-size: 14px;
   color: #3d1060;
   line-height: 1.6;
@@ -644,7 +644,7 @@ section.content-section{padding:70px 6%}
     <div class="hero-grid">
       <div class="hero-left-col">
         <div class="hero-img-card">
-          <img src="../pic/thay.jpg" alt="Giảng viên">
+          <img src="../pic/anh-4.png" alt="Giảng viên">
           <div class="card-text">
             Sinh viên sẽ phát triển nhận thức văn hóa và kỹ năng tư duy phản biện cần thiết để phân tích và sản xuất một loạt các cuộc trò chuyện trong một loạt các lĩnh vực nghề nghiệp - và liên tục tạo ra sự khác biệt.
           </div>
@@ -741,37 +741,39 @@ section.content-section{padding:70px 6%}
   <h2 class="section-title">SẢN PHẨM SINH VIÊN TIÊU BIỂU</h2>
   <div class="products-grid">
 
-    <div class="product-card">
-<div class="product-card-img" 
+    <div class="product-card" style="background:linear-gradient(140deg,#F7DAFC,#FFF2F6)">
+      <div class="product-card-img" 
      style="background-image:url('../pic/bentrai.png');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center">
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(160,100,0,0.4)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
       </div>
       <div class="product-card-body">
-        <h3>Hoài Phố Đăng Hoa</h3>
-        <div class="studio">Tương tác người & máy</div>
+        <h3>Remake MV "Bên trái"</h3>
+        <div class="studio">Sản xuất truyền thông</div>
         <button class="btn-card">Xem Thêm</button>
       </div>
     </div>
 
-    <div class="product-card" style="background:linear-gradient(140deg,#ffe590,#ffcf40)">
-      <div class="product-card-img" style="background:linear-gradient(140deg,#ffda60,#ffc820);display:flex;align-items:center;justify-content:center">
+    <div class="product-card" style="background:linear-gradient(140deg,#F7DAFC,#FFF2F6)">
+      <div class="product-card-img" 
+     style="background-image:url('../pic/đa\ điệu\ trà.png');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center">
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(160,100,0,0.4)" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M8 10 L12 6 L16 10"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
       </div>
       <div class="product-card-body">
-        <h3>Remake MV "Bên Trái"</h3>
-        <div class="studio">Studio II: Sản xuất truyền thông</div>
+        <h3>Dự án "Đa Điệu Trà"</h3>
+        <div class="studio">Dự án 1: Nghệ thuật và văn hóa</div>
         <button class="btn-card">Xem Thêm</button>
       </div>
     </div>
 
-    <div class="product-card" style="background:linear-gradient(140deg,#fff0a0,#ffe040)">
-      <div class="product-card-img" style="background:linear-gradient(140deg,#fff0a0,#ffe040);display:flex;align-items:center;justify-content:center;position:relative">
+    <div class="product-card" style="background:linear-gradient(140deg,#F7DAFC,#FFF2F6)">
+      <div class="product-card-img" 
+     style="background-image:url('../pic/hero.png');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center">
         <div style="position:absolute;top:10px;right:10px;background:rgba(255,255,255,.9);color:#333;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700"></div>
         <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(160,100,0,0.4)" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.9L15 14M3 8a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
       </div>
       <div class="product-card-body">
-        <h3>MV UEH50</h3>
-        <div class="studio">Studio II: Sản xuất phương tiện truyền thông số</div>
+        <h3>MUEHero to the rescue</h3>
+        <div class="studio">Animation</div>
         <button class="btn-card">Xem Thêm</button>
       </div>
     </div>
@@ -785,11 +787,16 @@ section.content-section{padding:70px 6%}
 
   <div class="ts-stats">
     <div style="text-align:center">
-      <div class="ts-stat-num">80</div>
+      <div class="ts-stat-num" style="color: #8e2de2;">
+  80
+</div>
       <div class="ts-stat-label">Chỉ tiêu<br><span style="font-size:12px;color:#aaa">Chương trình chuẩn, Chương trình bán phần và Chương trình toàn phần</span></div>
     </div>
     <div style="text-align:center">
-      <div class="ts-stat-num" style="font-size:clamp(28px,4vw,42px)">7580104</div>
+      <div class="ts-stat-num" 
+     style="font-size:clamp(28px,4vw,42px); color:#8e2de2;">
+  7580104
+</div>
       <div class="ts-stat-label">Mã đăng ký xét tuyển<br><span style="font-size:12px;color:#aaa">Cử nhân Truyền thông &amp; Thiết kế</span></div>
     </div>
   </div>
@@ -827,7 +834,7 @@ section.content-section{padding:70px 6%}
   <div class="result-table-wrap">
     <div class="result-row top">
       <div class="result-cell">
-        <div class="result-cell-num">23.00</div>
+        <div class="result-cell-num">26.40</div>
         <div class="result-cell-label">Điểm chuẩn</div>
       </div>
       <div class="result-cell">
