@@ -1,0 +1,323 @@
+/* ============================================================
+   RESPONSIVE.CSS
+   Thêm vào <head> của TẤT CẢ trang, sau các CSS khác:
+   <link rel="stylesheet" href="../css/responsive.css">
+   ============================================================ */
+
+/* ===================================================
+   BREAKPOINTS:
+   - Mobile:  max 480px
+   - Tablet:  max 768px
+   - Laptop:  max 1024px
+=================================================== */
+
+/* ===================================================
+   1. HEADER & NAV — tất cả trang
+=================================================== */
+@media (max-width: 1024px) {
+    /* Thu nhỏ chữ nav */
+    nav a, .tt-nav-bar a {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header chuyển sang 2 hàng: logo + actions trên, nav dưới */
+    header,
+    .dt-header,
+    .tt-top-nav .tt-nav-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 14px 4%;
+    }
+
+    /* Nav pill: cuộn ngang thay vì wrap */
+    nav,
+    .tt-nav-bar {
+        width: 100%;
+        order: 3;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        border-radius: 50px;
+        padding: 6px 10px;
+    }
+
+    nav::-webkit-scrollbar,
+    .tt-nav-bar::-webkit-scrollbar { display: none; }
+
+    nav ul,
+    .tt-nav-bar ul {
+        flex-wrap: nowrap;
+        gap: 4px;
+    }
+
+    nav a,
+    .tt-nav-bar a {
+        font-size: 13px;
+        padding: 9px 14px;
+        white-space: nowrap;
+    }
+
+    /* Logo */
+    .logo-img,
+    .tt-logo .logo-img {
+        height: 36px;
+    }
+
+    /* Header actions */
+    .header-actions,
+    .tt-header-actions {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a, .tt-nav-bar a {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* ===================================================
+   2. TRANG CHỦ (trangchu.html)
+=================================================== */
+@media (max-width: 768px) {
+    /* Hero banner text */
+    .hero-title  { font-size: clamp(20px, 5vw, 30px); }
+    .hero-subtitle { font-size: 14px; }
+
+    /* News layout: 2 cột → 1 cột */
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 4%;
+    }
+
+    .article-lead { font-size: 18px; }
+    .main-article h3 { font-size: 17px; }
+    .main-article p, .main-article li { font-size: 15px; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 20px; }
+    .hero-content { padding: 40px 4%; }
+}
+
+/* ===================================================
+   3. ĐÀO TẠO (daotao.html)
+=================================================== */
+@media (max-width: 768px) {
+    /* Hero title */
+    .hero-big-title {
+        font-size: clamp(48px, 14vw, 80px) !important;
+        letter-spacing: -1px;
+    }
+
+    .hero-center { padding: 0 5%; }
+
+    /* Program cards: stack content vertically */
+    .program-item-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .program-item { min-height: 180px; }
+
+    .program-item-info h3 { font-size: 18px; }
+    .program-item-info p  { font-size: 13px; }
+
+    /* Experience grid: 1 cột */
+    .experience-grid { grid-template-columns: 1fr; gap: 32px; }
+
+    /* Quiz: stack */
+    .quiz-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 20px;
+    }
+
+    /* Form */
+    .form-card { padding: 28px 20px; }
+    .form-title { font-size: 32px; }
+    
+}
+
+@media (max-width: 480px) {
+    .degree-group { padding: 0 4%; }
+    .program-meta { flex-wrap: wrap; gap: 8px; }
+}
+
+/* ===================================================
+   4. TRUYỀN THÔNG (truyen_thong.html)
+=================================================== */
+@media (max-width: 1024px) {
+    .tt-programs-carousel { grid-template-columns: 1fr 1fr; }
+    .tt-news-grid          { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    /* Hero */
+    
+    .tt-hero { min-height: 500px; padding: 100px 5% 40px; }
+    .tt-hero-title    { font-size: 48px; margin-bottom: 80px; }
+    .tt-hero-subtitle { font-size: 20px; }
+
+    /* Stats: side by side → stack */
+    .tt-stats-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 5%;
+    }
+    .hero-fullscreen, .tt-hero {
+        background-image: url('../pic/bg_hero_mobile.png') !important; /* Dùng đường dẫn file ảnh mobile của bạn */
+        background-size: cover; /* Phóng to che kín khung */
+        background-position: center; /* Căn giữa ảnh */
+        background-attachment: scroll; /* Không dùng fixed trên mobile (nếu có) */
+        min-height: 100vh; /* Giữ nguyên chiều cao toàn màn hình dọc */
+    }
+    .hero-big-title {
+        font-size: 28px !important; /* Giảm font size chữ DESIGN FUTURE */
+        width: 100% !important; /* Không giới hạn width cũ */
+    }
+    .hero-container {
+        padding: 60px 5% !important; /* Chỉnh padding nội dung */
+    }
+    
+    .hero-divider {
+        margin: 15px 0 !important; /* Thu nhỏ divider */
+    }
+    .tt-stat-number { font-size: 64px; }
+    .tt-stat-label  { font-size: 20px; }
+
+    /* Programs: 1 cột */
+    .tt-programs-carousel { grid-template-columns: 1fr; }
+    .tt-programs-section  { padding: 40px 5%; }
+
+    /* Moments: 1 cột */
+    .tt-moments-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .tt-moments-section { padding: 50px 5%; }
+
+    /* News: 1 cột */
+    .tt-news-grid    { grid-template-columns: 1fr; }
+    .tt-news-section { padding: 40px 5%; }
+
+    /* Featured news: stack */
+    .tt-featured-news { grid-template-columns: 1fr; gap: 20px; }
+    .tt-featured-image { height: 220px; }
+    
+}
+
+@media (max-width: 480px) {
+    .tt-hero-title    { font-size: 36px; }
+    .tt-hero-subtitle { font-size: 16px; }
+    .tt-section-title { font-size: 26px; }
+}
+
+/* ===================================================
+   5. CHI TIẾT NGÀNH (truyen-thong-thiet-ke.html)
+=================================================== */
+@media (max-width: 1024px) {
+    .products-grid { grid-template-columns: 1fr 1fr; }
+    .ts-methods    { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    /* Hero pill */
+    .hero-title-pill { padding: 12px 24px; top: -22px; }
+    .hero-title-pill h1 { font-size: 22px; }
+
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-meta-overlay {
+        position: relative;
+        top: auto; right: auto;
+        margin-bottom: 16px;
+        justify-content: center;
+    }
+    .pg-hero { padding: 100px 4% 40px; }
+
+    /* Roadmap */
+    .roadmap-section { padding: 50px 4%; }
+    .roadmap-header  { padding: 18px 20px; }
+    .roadmap-body    { padding: 0 20px; }
+    .roadmap-item.open .roadmap-body { padding: 0 20px 20px; }
+    .roadmap-year    { font-size: 18px; }
+
+    /* Products */
+    .products-grid { grid-template-columns: 1fr; }
+
+    /* Admission stats */
+    .ts-stats { grid-template-columns: 1fr; gap: 24px; }
+
+    /* Result table */
+    .result-row.top    { grid-template-columns: 1fr 1fr; }
+    .result-row.bottom { grid-template-columns: 1fr; }
+
+    /* Form */
+    .form-card  { padding: 28px 16px; }
+    .form-title { font-size: 28px; }
+}
+
+@media (max-width: 480px) {
+    .hero-title-pill h1 { font-size: 18px; }
+    .hero-container { padding: 20px; }
+    .result-row.top { grid-template-columns: 1fr; }
+}
+
+/* ===================================================
+   6. FOOTER — tất cả trang
+=================================================== */
+@media (max-width: 1100px) {
+    .footer-container,
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-footer,
+    .dt-footer {
+        padding: 50px 5% 60px;
+    }
+
+    .footer-container,
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .footer-institute,
+    .links-col h3,
+    .footer-col h4 { font-size: 18px; }
+
+    .footer-contact,
+    .links-col ul li a,
+    .footer-col ul li a { font-size: 13px; }
+}
+
+/* ===================================================
+   7. UTILITIES — dùng chung
+=================================================== */
+
+/* Ảnh luôn không vượt container */
+img { max-width: 100%; height: auto; }
+
+/* Tránh text bị cắt */
+h1, h2, h3 { word-break: keep-all; overflow-wrap: break-word; }
+
+/* Touch target tối thiểu 44px */
+button, a { min-height: 44px; display: inline-flex; align-items: center; }
+nav a, .tt-nav-bar a { min-height: unset; display: block; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Tránh horizontal scroll trên mobile */
+body { overflow-x: hidden; }
